@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --workshop-metal: #18181b;
+  --workshop-accent: #10b981;
+  --workshop-highlight: #34d399;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-900 text-emerald-300;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+
+@layer components {
+  .industrial-button {
+    @apply px-4 py-2 bg-zinc-800 border border-emerald-500/20 text-emerald-400 
+           hover:bg-emerald-500/10 active:bg-emerald-500/20 
+           transition-colors duration-150 rounded font-mono text-sm;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-emerald-500/20 hover:bg-emerald-500/30 rounded;
+}
